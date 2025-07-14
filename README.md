@@ -1,13 +1,13 @@
-NewsNinja - Stealthy News Aggregator
+WebScraper Agent - Stealthy News Aggregator
 
-Your personal news ninja that silently gathers headlines and Reddit reactions, then delivers audio briefings straight to your ears. *No scroll, just soul.*
+Your personal news WebScraper Agent that silently gathers headlines and Reddit reactions, then generate audio.
 
 ---
 FEATURES
-- 🗞️ Scrape premium news websites (bypassing paywalls)
-- 🕵️♂️ Extract live Reddit reactions (even from JS-heavy threads)
-- 🔊 AI-powered audio summaries (text-to-speech with ElevenLabs)
-- ⚡ Real-time updates (thanks to Bright Data's MCP magic)
+- Scrape premium news websites (bypassing paywalls)
+- Extract live Reddit reactions (even from JS-heavy threads)
+- AI-powered audio summaries (text-to-speech with ElevenLabs)
+- Real-time updates (thanks to Bright Data's MCP magic)
 
 ---
 PREREQUISITES
@@ -18,22 +18,21 @@ PREREQUISITES
 ---
 QUICK START
 
-1. Clone the Dojo
+1. Clone the repo
 ```
-git clone https://github.com/AIwithhassan/newsninja.git
-cd NewsNinja
+https://github.com/abhianvSmeena/WebScraper-Agent.git
+cd WebScraper-Agent
 ```
 
 2. Install Dependencies
 ```
-pipenv install
-pipenv shell
+pip install -r requirements.txt
 ```
 
 3. Ninja Secrets (Environment Setup)
-Create .env file:
+Create virtual env file:
 ```
-cp .env.example .env
+python -m venv venv
 ```
 
 Configure your secrets in .env:
@@ -52,16 +51,16 @@ ELEVENLABS_API_KEY="your_text_to_speech_key"
 - Copy credentials to .env
 
 ---
-RUNNING THE NINJA
+RUNNING THE WebScraper-Agent
 
 First terminal (Backend):
 ```
-pipenv run python backend.py
+python run backend.py
 ```
 
 Second terminal (Frontend):
 ```
-pipenv run streamlit run frontend.py
+streamlit run frontend.py
 ```
 
 ---
@@ -74,16 +73,15 @@ PROJECT STRUCTURE
 ├── news_scraper.py      # News Scraper  
 ├── reddit_scraper.py    # Reddit Scraper  
 ├── models.py            # Pydantic model
-├── Pipfile              # Dependency scroll
-├── .env.example         # Secret map template
+├── .env                 # Secret map template
 └── requirements.txt     # Alternative dependency list
 ```
 
 ---
 NOTES
-- First scrape takes 15-20 seconds (good ninjas are patient)
+- First scrape takes 15-20 seconds
 - Reddit scraping uses real browser emulation via MCP
-- Keep .env file secret (ninjas never reveal their tools)
+- Keep .env file secret
 
 ---
 SUPPORT
